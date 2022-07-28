@@ -26,14 +26,14 @@ def get_numeral_1_10(x: int) -> str:
     return numerals_1_10[x - 1]
 
 
-def _join_numeral(parts: list[str], *, delimeter: Optional[str] = None) -> str:
-    if delimeter is None:
-        delimeter = ""
-    return delimeter.join(parts)
+def _join_numeral(parts: list[str], *, delimiter: Optional[str] = None) -> str:
+    if delimiter is None:
+        delimiter = ""
+    return delimiter.join(parts)
 
 
-def display_numeral(x: int, *, delimeter: Optional[str] = None):
-    print(_join_numeral(get_finnish_numeral(x), delimeter=delimeter))
+def display_numeral(x: int, *, delimiter: Optional[str] = None):
+    print(_join_numeral(get_finnish_numeral(x), delimiter=delimiter))
 
 
 if __name__ == '__main__':
@@ -46,6 +46,6 @@ if __name__ == '__main__':
         print(x)
 
         sleep(2)
-        display_numeral(x, delimeter="_")
+        display_numeral(x, delimiter="_")
         sleep(0.5)
         print()
